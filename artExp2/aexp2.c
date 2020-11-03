@@ -68,9 +68,39 @@ int main(void)
   // (e.g) b *= 2, this would translate to b is equal to b multiplied by 2
   // (e.g) c -=2, this would translate to b is equal to b subtract by 2
 
-  b /= 2;
+  b *= 2;
   printf("%d\n", b);
   printf("\n");
+
+  b += 1;
+  printf("%d\n", b);
+  printf("\n");
+
+  //increment/ decrement operator in C
+  // quick shortcut
+  // a - 1 == a--
+  // a + 1 == a++
+
+  b++;
+  printf("%d\n", b);
+  printf("\n");
+
+  // example to reconsider.....?
+  c = 5;
+  a = b++ + c;
+  printf("a is %d, and b is %d \n", a, b);
+  printf("\n");
+  // ---> why does b increment by 1 after solving for a?
+  //since b++ is called a post-increment, so here b is incremented after it's used
+
+  b = 20;
+  c = 5;
+  a = ++b + c;
+
+  printf("a is %d, and b is %d \n", a, b);
+  printf("\n");
+  // ---> why does b increment by 1 before solving for a?
+  //since ++b is a pre-increment, so here b is incremented before it's used
 
   return 0;
 }
