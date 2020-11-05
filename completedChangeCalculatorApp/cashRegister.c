@@ -53,11 +53,11 @@ int main(void)
   printf("Total nickels: %d, Balance owing is: %.2lf \n", numNickels, changeN);
 
   //pennies
-  penniesR = changeN / 0.01;    // cN = 0.03 -> 0.03/0.01
-  numPennies = penniesR + 0.05; // error???
-  changeP = changeN - (numPennies * 0.01);
+  penniesR = changeN / 0.01;
+  numPennies = penniesR;
+  changeP = changeN - (penniesR * 0.01);
 
-  printf("Total pennies: %d, Balance Owing is: %.2lf \n", numPennies, changeP);
+  printf("Total pennies: %.lf, Balance Owing is: %.2lf \n", penniesR, changeP);
 
   return 0;
 }
