@@ -5,8 +5,8 @@ int main(void)
 {
   // Change app.... does it solve any real world problems?
   // Not really we got calculators in our phones but it was great way to kill 5 minutes....
-  double ttl, ttlQuart, change;
-  int loonies, quarters, remainder;
+  double amtPaid, change, quartersR, changeQ, dimesR, changeD, nickelsR, changeN, penniesR, changeP;
+  int numLoonies, numQuarters, numDimes, numNickels, numPennies;
 
   printf("\n");
   printf(" ------------------------------------------------\n");
@@ -17,21 +17,23 @@ int main(void)
 
   printf("\n");
   printf("Please enter the amount to be paid: $");
-  scanf("%lf", &ttl);
+  scanf("%lf", &amtPaid);
   printf("\n");
 
-  printf("Your amount total: $%.2lf\n", ttl);
+  printf("Your amount total: $%.2lf\n", amtPaid);
 
-  loonies = (int)ttl;
-  change = ttl - (double)loonies;
-  printf("Total loonies: %d, Balance Owing: %.2lf \n", loonies, change);
+  numLoonies = amtPaid;
+  change = amtPaid - (double)numLoonies;
 
-  ttlQuart = change / 0.25;
-  quarters = ttlQuart;
-  change = ttlQuart - (double)quarters;
-  printf("Total quarters: %d, Balance Owing: %.2lf \n", quarters, change);
+  printf("Total loonies: %d, Balance Owing: %.2lf \n", numLoonies, change);
 
-  //printf("Total Quarters: %d\n", quarters);
+  // quarter
+
+  quartersR = change / 0.25;
+  numQuarters = quartersR;
+  changeQ = change - (numQuarters * .25);
+
+  printf("Total quarters is %d, Balance owing is: %.2lf \n", numQuarters, changeQ);
 
   return 0;
 }
