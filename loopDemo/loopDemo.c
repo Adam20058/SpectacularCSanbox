@@ -29,8 +29,8 @@ int main(void)
 
   printf("\n");
 
-  //2) do-while loop
-  // it's simple: 1) executes sequence 2) update variable value 3) checks condition 4) Loop if true and IF not true exit loop
+  // //2) do-while loop
+  // // it's simple: 1) executes sequence 2) update variable value 3) checks condition 4) Loop if true and IF not true exit loop
 
   int j;
   j = 30;
@@ -59,7 +59,7 @@ int main(void)
   printf("\n");
   printf("blastoff!!!!!!!\n");
 
-  //another attempt
+  // //another attempt
 
   printf("\n");
 
@@ -79,9 +79,9 @@ int main(void)
 
   printf("\n");
 
-  //3) For loop
-  // My favourite loop so far: 1) starts off with a for statement comprised of three parts i) initilization 2) condition 3) update
-  //summary: Start -> initilaization -> condition check -> execute sequence if true -> update (return to condition check) ***** if false in condition check it exits the loop
+  // //3) For loop
+  // // My favourite loop so far: 1) starts off with a for statement comprised of three parts i) initilization 2) condition 3) update
+  // //summary: Start -> initilaization -> condition check -> execute sequence if true -> update (return to condition check) ***** if false in condition check it exits the loop
 
   int h;
 
@@ -98,7 +98,7 @@ int main(void)
   int k, l;
   for (k = 0; k < 3; k++)
   {
-    for (l = k; l > 0; l--)
+    for (l = k; l >= 0; l--)
     {
       printf("k is %d and l is %d\n", k, l);
     }
