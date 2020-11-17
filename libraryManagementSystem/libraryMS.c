@@ -4,7 +4,7 @@
 
 struct library
 {
-  char bk_name[30];
+  char bookName[30];
   char author[30];
   int pages;
   float price;
@@ -13,7 +13,7 @@ struct library
 int main()
 {
   struct library l[100];
-  char ar_nm[30], bk_nm[30];
+  char arNm[30], bookNm[30];
   int i, j, keepcount;
   i = j = keepcount = 0;
 
@@ -34,7 +34,7 @@ int main()
     case 1:
 
       printf("Enter book name = ");
-      scanf("%s", l[i].bk_name);
+      scanf("%s", l[i].bookName);
 
       printf("Enter author name = ");
       scanf("%s", l[i].author);
@@ -51,7 +51,7 @@ int main()
       printf("you have entered the following information\n");
       for (i = 0; i < keepcount; i++)
       {
-        printf("book name = %s", l[i].bk_name);
+        printf("book name = %s", l[i].bookName);
 
         printf("\t author name = %s", l[i].author);
 
@@ -63,21 +63,21 @@ int main()
 
     case 3:
       printf("Enter author name : ");
-      scanf("%s", ar_nm);
+      scanf("%s", arNm);
       for (i = 0; i < keepcount; i++)
       {
-        if (strcmp(ar_nm, l[i].author) == 0)
-          printf("%s %s %d %f", l[i].bk_name, l[i].author, l[i].pages, l[i].price);
+        if (strcmp(arNm, l[i].author) == 0)
+          printf("%s %s %d %f", l[i].bookName, l[i].author, l[i].pages, l[i].price);
       }
       break;
 
     case 4:
       printf("Enter book name : ");
-      scanf("%s", bk_nm);
+      scanf("%s", bookNm);
       for (i = 0; i < keepcount; i++)
       {
-        if (strcmp(bk_nm, l[i].bk_name) == 0)
-          printf("%s \t %s \t %d \t %f", l[i].bk_name, l[i].author, l[i].pages, l[i].price);
+        if (strcmp(bookNm, l[i].bookName) == 0)
+          printf("%s \t %s \t %d \t %f", l[i].bookName, l[i].author, l[i].pages, l[i].price);
       }
       break;
 
