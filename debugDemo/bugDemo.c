@@ -8,7 +8,7 @@
 
 int main(void)
 {
-  int i, j, prime = 0;
+  int i, n = 0, j, prime = 0;
 
   for (i = 0; i < 100; i++)
   {
@@ -27,10 +27,12 @@ int main(void)
       if (i > 1) // added this to remove 0 and 1. Since they're not considered prime numbers
       {
         printf("%d is prime \n", i);
+        n++;
       }
     }
   }
-
+  printf("\n");
+  printf("Between the numbers 0 - 100, There are %d prime numbers\n\n", n);
   return 0;
 }
 
